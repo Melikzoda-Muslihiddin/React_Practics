@@ -1,4 +1,10 @@
-function Header(){
-    return <h1>Header</h1>
+const Mycard = ({name,children}) => {
+
+    return (
+        <div className="all">
+            <img className="imgYou" src="./images/image.png" alt="" />
+            <h1>Hello my name is {name} {children}</h1>
+        </div>
+    )
 }
-export default Header
+export default Mycard

@@ -1,4 +1,8 @@
 function Hero(){
-    return <h1>Hero</h1>
+    return (
+        <div>
+            <button className="bntClick">Click me</button>
+        </div>
+    )
 }
 export default Hero

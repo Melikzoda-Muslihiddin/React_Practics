@@ -1,4 +1,8 @@
 function Features(){
-    return <h1>Features</h1>
+    return (
+        <div>
+            
+        </div>
+    )
 }
 export default Features

@@ -8,8 +8,9 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <div>
-      <Header />
+      <Header name="My Card">
       <Hero />
+      </Header>
       <Features />
       <Pricing />
       <Questions />
