@@ -1,113 +1,89 @@
 function Questions() {
   return (
-    <div className="reviewsFaq">
-      <div className="reviewsTop">
-        <h2 className="reviewsTitle">Отзывы</h2>
-        <div className="reviewsArrows">
-          <button>←</button>
-          <button>→</button>
-        </div>
-      </div>
-      <div className="reviewsCards">
-        <div className="reviewCard">
-          <p className="reviewText">
-            Изначально нашёл сервис в поиске Яндекса, когда искал калькулятор
-            unit-экономики товара. Калькулятор полностью устроил и решил
-            пользоваться самим сайтом. К тому же это было для меня бесплатно,
-            так как калькулятор по условиям бесплатного доступа: оборот до
-            200т.р. в месяц. Это не встретить на других сайтах, это возможность
-            развиваться на ранних этапах, без вложения огромных сумм для доступа
-            к подобным сайтам.
-          </p>
-          <button className="readMoreBtn">Читать полностью ˅</button>
-          <h4>— Алексей</h4>
-        </div>
-        <div className="reviewCard reviewCardSecond">
-          <p className="reviewText">
-            Функционал сервиса, тот что есть — полностью устраивает. Хочется ещё
-            автобиддер по ставкам в рекламных компаниях и это наверное всё что
-            будет!
-          </p>
-          <h4>— Владислав</h4>
-        </div>
-      </div>
-      <div className="reviewDots">
-        <span className="dotActive"></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div className="faqSection">
-        <div className="faqLeft">
-          <h2 className="faqTitle">Часто задаваемые вопросы</h2>
-          <p className="faqSub">
-            Собрали ответы на часто задаваемые вопросы от вас
-          </p>
-          <div className="faqItem faqItemOpen">
-            <div className="faqHead">
-              <h3>Чем вы отличаетесь от Mpstats и других систем аналитики?</h3>
-              <button className="faqCircle">×</button>
+    <section className="bg-[#f4f4f4] py-20">
+      <div className="max-w-300 mx-auto px-6 mb-20">
+        <div className="relative overflow-hidden rounded">
+          <img
+            src="/images/Back_img_fabric.jpg"
+            className="w-full h-105 object-cover"
+          />
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute left-12 top-16 max-w-105 text-white">
+            <h2 className="text-4xl font-bold leading-tight mb-6">
+              СТАБИЛЬНЫЕ
+              <br />
+              ПОСТАВКИ ЗА СЧЕТ
+              <br />
+              СОБСТВЕННОЙ
+              <br />
+              ЛЕСОЗАГОТОВКИ
+            </h2>
+            <div className="flex items-center gap-3 text-green-400 mb-6">
+              <div className="border border-green-500 w-12 h-12 flex items-center justify-center">
+                <img src="/images/Play_icon.svg" className="w-4" />
+              </div>
+              <span className="text-sm">СМОТРЕТЬ ВИДЕО О ЗАВОДЕ</span>
             </div>
-            <p className="faqText">
-              Мы специализируемся на внутренней финансовой аналитике, поэтому
-              данные у нас более точные и полезные. Другие сервисы аналитики
-              обычно специализируются на внешнем анализе продаж всех поставщиков
-              и берут данные из открытых источников. Мы же собираем данные
-              только по вашим кабинетам, по тем доступам, которые вы нам
-              предоставили.
+            <p className="text-gray-200 text-sm">
+              Гибкий подход к условиям сотрудничества – скидки, различные формы
+              оплаты, условия поставки.
             </p>
           </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>Сколько я могу пользоваться своими данными?</h3>
-              <button className="faqCircle">+</button>
+          <div className="absolute right-0 top-0 w-105 h-full bg-green-600 p-10 text-white">
+            <div className="mb-10">
+              <h3 className="font-bold mb-2">Сертификат FSC</h3>
+              <p className="text-sm text-green-100">
+                Сертифицированная продукция (FSC 100%) по системе Forest
+                Stewardship Council®.
+              </p>
             </div>
-          </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>Сколько времени занимает создание отчетов?</h3>
-              <button className="faqCircle">+</button>
+            <div className="mb-10">
+              <h3 className="font-bold mb-2">Соответствие регламенту EUTR</h3>
+              <p className="text-sm text-green-100">
+                (European Union Timber Regulation) – предоставляем необходимый
+                пакет документов.
+              </p>
             </div>
-          </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>В чем удобство вашей аналитики?</h3>
-              <button className="faqCircle">+</button>
+            <div>
+              <h3 className="font-bold mb-2">Сертификат CARB / CARB2</h3>
+              <p className="text-sm text-green-100">
+                Для поставок в США и другие страны, запрещающие сертификацию на
+                соответствие производимой продукции стандартам по выбросам
+                формальдегида.
+              </p>
             </div>
-          </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>Насколько точные данные получаются по API?</h3>
-              <button className="faqCircle">+</button>
-            </div>
-          </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>Что делать если маркетплейс изменит API?</h3>
-              <button className="faqCircle">+</button>
-            </div>
-          </div>
-          <div className="faqItem">
-            <div className="faqHead">
-              <h3>Безопасно ли передавать вам API ключи от кабинета?</h3>
-              <button className="faqCircle">+</button>
-            </div>
-          </div>
-        </div>
-        <div className="faqRight">
-          <div className="faqBanner">
-            <h2>Повысьте эффективность маркетинга и продаж с Mpassistant</h2>
-            <p>
-              3-дневный пробный период с неограниченным доступом ко всем
-              возможностям
-            </p>
-            <input type="text" placeholder="Введите ваш email" />
-            <button>Попробовать</button>
-            <img className="faqGirl" src="/images/3.png" alt="" />
-            <img className="faqIcon" src="/images/2.png" alt="" />
           </div>
         </div>
       </div>
-    </div>
+      <div className="max-w-300 mx-auto px-6">
+        <h2 className="text-3xl font-bold text-gray-700 mb-10">
+          ГЕОГРАФИЯ ПОСТАВОК
+        </h2>
+        <div className="lg:flex justify-between items-start mb-8">
+          <p className="text-gray-500 text-sm max-w-65">
+            Доставляем грузы по всему миру в Европу, Азию, Америку, Египет
+          </p>
+          <div className="flex lg:flex-col flex-wrap  gap-4 flex-row my-10">
+            <div className="flex items-center gap-3">
+                <span className="text:green">- - - - - - - - - - - - -</span>
+              <img src="/images/Korabl.png" className="w-6" />
+              <span className="text-gray-500 text-sm">Морские перевозки</span>
+            </div>
+            <div className="flex items-center gap-3">
+                <span className="text:green">- - - - - - - - - - - - -</span>
+              <img src="/images/Poezd.png" className="w-6" />
+              <span className="text-gray-500 text-sm">Железная дорога</span>
+            </div>
+            <div className="flex items-center gap-3">
+                <span className="text:green">- - - - - - - - - - - - -</span>
+              <img src="/images/Fura.png" className="w-6" />
+              <span className="text-gray-500 text-sm">Автотранспорт</span>
+            </div>
+          </div>
+        </div>
+        <img src="/images/Map.png" className="w-full" />
+      </div>
+    </section>
   );
 }
 export default Questions;

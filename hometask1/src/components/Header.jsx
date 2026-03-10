@@ -1,38 +1,66 @@
-function Header(){
-    return (
-        <div className="header">
-            <div className="top">
-                <div className="logo">
-                    <img className="logoImg" src="./images/1.svg" alt="" />
-                    <p className="vxod" style={{fontSize:"12px"}}>Аналитика и оцифровка продаж <br /><span style={{color:"#702A8A"}}><b>Wildberries</b></span> и <span style={{color: "#1065FF"}}><b>Ozon</b></span></p>
-                </div>
-                <div className="top1 vxod">
-                    <a style={{color:"gray"}}>О нас</a>
-                    <a style={{color:"gray"}}>Возможности</a>
-                    <a style={{color:"gray"}}>Тарифы</a>
-                </div>
-                <div className="btns">
-                    <button className="btnLog"><img className="imgBtnLog" src="./images/vixod.png" alt="" /><span className="vxod"><b>Вход</b></span></button>
-                    <button className="btnReg">Зарегистрироваться</button>
-                    <img className="menuImg" src="./images/menu.png" alt="" />
-                </div>
-            </div>
-            <div className="headerBody">
-                <div className="bodyLeft">
-                    <h1><span style={{color:"#2EB897"}}>Внутренняя аналитика</span> и <span style={{color:"#2A84EE"}}>финансовый учёт</span> для бизнеса на маркетплейсах <img className="wb_ozon" src="./images/2.png" alt="" /></h1>
-                    <p style={{color:"gray",width:"500px"}}>Увеличивай прибыль, автоматизируй рутину и экономь время на сборе и анализе отчётов</p>
-                    <div className="prob">
-                        <p style={{color:"white"}}>Начните свой 3-дневный пробный период с неограниченным доступом ко всем возможностям</p>
-                        <label><input className="lab" placeholder="Enter your email..." type="email"/><button className="lab1"><span className="rob">Попробовать</span></button></label>
-                    </div>
-                </div>
-                <div className="bodyRight">
-                    <img className="km" src="./images/karobka_min.png" alt="" />
-                    <img className="img3" src="./images/3.png" alt="" />
-                    <img className="kb" src="./images/karobka_big.png" alt="" />
-                </div>
-            </div>
+function Header() {
+  return (
+    
+    <section className="relative h-screen w-full">
+        <header className="absolute top-0 left-0 w-full z-20">
+      <div className="max-w-7xl mx-auto flex items-center justify-between p-6 text-white">
+
+        <img src="/images/Logo.png" className="h-10" />
+
+        <nav className="hidden md:flex gap-8">
+          <a href="#">Продукция</a>
+          <a href="#">Поставщикам</a>
+          <a href="#">Вакансии</a>
+          <a href="#">Новости</a>
+          <a href="#">Контакты</a>
+        </nav>
+
+        <div className="hidden md:flex items-center gap-6">
+
+          <div className="flex items-center gap-2">
+            <img src="/images/Phone_icon.png" className="w-4" />
+            +7 (342) 250-08-88
+          </div>
+
+          <div className="flex items-center gap-2">
+            <img src="/images/Email_icon.png" className="w-4" />
+            info@grdok.ru
+          </div>
+
         </div>
-    )
+
+        <img src="/images/Menu.png" className="w-7 md:hidden" />
+
+      </div>
+    </header>
+      <img
+        src="/images/BackImage.jpg"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
+      <div className="absolute inset-0 bg-black/50"></div>
+      <div className="relative z-10 max-w-5xl mx-auto px-6 h-full flex items-center sm:max-w-[90%] sm:px-4">
+        <div className="text-white max-w-2xl">
+          <h1 className="text-4xl font-bold leading-tight">
+            ГРУППА КОМПАНИЙ
+            <br />
+            ГРЕМЯЧИНСКИЙ ДОК
+          </h1>
+
+          <p className="mt-6 text-lg text-gray-200">
+            Современное предприятие по производству гнуто-клееных изделий
+            (латофлекс), фанеры, топливных брикетов RUF, березового угля,
+            пиломатериалов.
+          </p>
+
+          <button className="mt-8 bg-green-600 hover:bg-green-700 px-8 py-3 rounded-xs text-white">
+            Связаться с нами
+          </button>
+        </div>
+      </div>
+      <div className="absolute bottom-8 right-8">
+        <img src="/images/WhatsApp.png" className="w-14 h-14" />
+      </div>
+    </section>
+  );
 }
-export default Header
+export default Header;
