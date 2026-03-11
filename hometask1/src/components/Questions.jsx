@@ -143,7 +143,7 @@ function Questions() {
           Наши партнёры
         </h3>
 
-        <div className="grid grid-cols-2 lg:w-230 lg:mx-auto lg:flex lg:flex-wrap sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3 gap-2 max-w-82 mx-auto items-center justify-items-center">
+        <div className="grid grid-cols-2 lg:w-230 lg:mx-auto lg:flex lg:flex-wrap sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3 gap-2 mx-auto items-center justify-items-center">
           {partners.map((partner, index) => (
             <div
               key={index}

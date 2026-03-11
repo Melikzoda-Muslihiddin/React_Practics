@@ -16,7 +16,7 @@ function Header() {
             <a href="#acc" className="hover:text-green-400 transition">
               Акселератор
             </a>
-            <a href="#" className="hover:text-green-400 transition">
+            <a href="#nov" className="hover:text-green-400 transition">
               Новости
             </a>
           </nav>
