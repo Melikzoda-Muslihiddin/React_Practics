@@ -1,19 +1,19 @@
 function Header() {
   return (
     <div style={{ backgroundImage: "/images/back_hero.png", height:"100vh" }} className="">
-      <header className="absolute top-0 left-0 w-full h-screen z-50 bg-[#00000059]">
+      <header className="absolute top-0 left-0 w-full h-screen z-50">
         <div className="max-w-full mx-auto px-6 py-4 flex bg-[#45424279] items-center justify-between">
           <div className="flex items-center">
             <img src="/images/INNOMA.VC.png" className="w-32" />
           </div>
           <nav className="hidden md:flex gap-8 text-white text-sm">
-            <a href="#" className="hover:text-green-400 transition">
+            <a href="#dlay" className="hover:text-green-400 transition">
               Кто мы?
             </a>
             <a href="#uslugi" className="hover:text-green-400 transition">
               Услуги
             </a>
-            <a href="#" className="hover:text-green-400 transition">
+            <a href="#acc" className="hover:text-green-400 transition">
               Акселератор
             </a>
             <a href="#" className="hover:text-green-400 transition">
@@ -34,8 +34,8 @@ function Header() {
         className="bg-cover bg-center h-screen flex items-center"
         style={{ backgroundImage: "url('/images/back_hero.png')" }}
       >
-        <div className="max-w-5xl mx-auto px-6 text-white">
-          <h1 className="text-3xl font-bold leading-tight">
+        <div className="max-w-5xl ml-40 px-6 text-white">
+          <h1 className="text-3xl lg:text-5xl font-bold leading-tight">
             ЗАПУСТИТЕ <br />
             <span className="bg-green-500 px-2">ТЕХНОЛОГИЧЕСКИЙ IT-БИЗНЕС</span>
             <br />
