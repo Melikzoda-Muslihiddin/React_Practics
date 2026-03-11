@@ -34,7 +34,7 @@ function Header() {
         className="bg-cover bg-center h-screen flex items-center"
         style={{ backgroundImage: "url('/images/back_hero.png')" }}
       >
-        <div className="max-w-5xl ml-40 px-6 text-white">
+        <div className="max-w-5xl lg:ml-40 px-6 text-white">
           <h1 className="text-3xl lg:text-5xl font-bold leading-tight">
             ЗАПУСТИТЕ <br />
             <span className="bg-green-500 px-2">ТЕХНОЛОГИЧЕСКИЙ IT-БИЗНЕС</span>
