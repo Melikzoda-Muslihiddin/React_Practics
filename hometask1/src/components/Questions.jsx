@@ -5,7 +5,16 @@ const hackathonImages = [
   "/src/assets/hackaton_4.svg",
   "/src/assets/hackaton_5.svg",
 ];
-
+const partners = [
+  { img: "/src/assets/HUB_71.svg" },
+  { img: "/src/assets/Racuten_Ventures.svg" },
+  { img: "/src/assets/Dteck.svg" },
+  { img: "/src/assets/ED.svg" },
+  { img: "/src/assets/h1cool.svg" },
+  { img: "/src/assets/cranchbase.svg" },
+  { img: "/src/assets/Dealroom 1.svg" },
+  { img: "/src/assets/parner_logo.svg" },
+];
 const experts = [
   {
     img: "/src/assets/Yuriy_Kim.svg",
@@ -129,6 +138,26 @@ function Questions() {
             </div>
           ))}
         </div>
+      <div className="py-12 md:py-14">
+        <h3 className="text-[#1385d8] text-[24px] md:text-[32px] font-bold text-start mb-10">
+          Наши партнёры
+        </h3>
+
+        <div className="grid grid-cols-2 lg:w-230 lg:mx-auto lg:flex lg:flex-wrap sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:gap-3 gap-2 max-w-82 mx-auto items-center justify-items-center">
+          {partners.map((partner, index) => (
+            <div
+              key={index}
+              className="bg-white lg:w-55 lg:h-30 rounded-lg shadow-sm w-40 h-20 flex items-center justify-center hover:shadow-md transition p-5"
+            >
+              <img
+                src={partner.img}
+                alt="partner"
+                className="lg:max-w-38 max-w-26 object-contain"
+              />
+            </div>
+          ))}
+        </div>
+      </div>
       </div>
     </section>
   );
