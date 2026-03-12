@@ -1,168 +1,157 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Features from "./components/Features";
-import Pricing from "./components/Pricing";
-import Questions from "./components/Questions";
-import Footer from "./components/Footer";
-// import Card from "./components/Card";
+import { useState } from "react";
 
 function App() {
-  const products = [
+  let [srch, setsrch] = useState("");
+  const [data, setData] = useState([
     {
       id: 1,
-      img: "/images/Latoflex.png",
-      name: "Латофлекс",
-      infoText:
-        "Шпон березовый лущеный, ГОСТ 99-96B Смола марки КФМТ - 15, класс эмиссии E0",
+      name: "CR7",
+      job: "Senior",
+      status: true,
     },
     {
       id: 2,
-      img: "/images/fanera.png",
-      name: "ФАНЕРА",
-      infoText:
-        "Шпон березовый лущеный, ГОСТ 99-96В. Смола марки КФМТ - 15, класс эмиссии Е0",
+      name: "Karim Benzama",
+      job: "Junior",
+      status: false,
     },
     {
       id: 3,
-      img: "/images/Raf.png",
-      name: "БРИКЕТЫ RUF",
-      infoText:
-        "Прессованные березовые опилки без применения химических добавоk",
+      name: "Bonuchi",
+      job: "middle",
+      status: true,
     },
     {
       id: 4,
-      img: "/images/Pilomaterial.png",
-      name: "ПИЛОМАТЕРИАЛЫ",
-      infoText:
-        "Дисковый распил - ель сибирская, пихта, сосна, берёза, липа, осина",
+      name: "Maykl Jordan",
+      job: "Biginer",
+      status: false,
     },
     {
       id: 5,
-      img: "/images/Krovatniye.png",
-      name: "КРОВАТНЫЕ ОСНОВАНИЯ",
-      infoText: "Из берёзового шпона или из массива на ленте",
-    },
-    {
-      id: 6,
-      img: "/images/Ugol.png",
-      name: "УГОЛЬ",
-      infoText: "Микропористый высокоуглеродистый продукт",
-    },
-    {
-      id: 7,
-      img: "/images/Sajensi.png",
-      name: "САЖЕНЦЫ",
-      infoText: "Молодые деревья выращенные в питомнике",
-    },
-    {
-      id: 8,
-      img: "/images/Otxodi.png",
-      name: "ОТХОДЫ ПРОИЗВОДСТВА",
-      infoText:
-        "Прессованные березовые опилки без применения химических добавок",
-    },
-  ];
-  const works = [
-    {
-      id: 1,
-      name: "ВОДИТЕЛЬ ЛЕСОВОЗА",
-      price: "З.п. от 50 000 ₽",
-      infoText:
-        "Оборудование предприятия поставляется от мировых лидеров стабильный выпуск продукции.",
-    },
-    {
-      id: 2,
-      name: "ОПЕРАТОР ЛИНИИ",
-      price: "З.п. от 45 000 ₽",
-      infoText:
-        "Работа на современном оборудовании, контроль производственного процесса и соблюдение стандартов качества.",
-    },
-    {
-      id: 3,
-      name: "МАШИНИСТ ПОГРУЗЧИКА",
-      price: "З.п. от 48 000 ₽",
-      infoText:
-        "Погрузка, разгрузка и перемещение готовой продукции по территории предприятия.",
-    },
-    {
-      id: 4,
-      name: "СЛЕСАРЬ-РЕМОНТНИК",
-      price: "З.п. от 52 000 ₽",
-      infoText:
-        "Обслуживание и ремонт производственного, обеспечение бесперебойной работы линии.",
-    },
-    {
-      id: 5,
-      name: "ЭЛЕКТРИК-Santexnik",
-      price: "З.п. от 47 000 ₽",
-      infoText:
-        "Контроль электрических систем, устранение неисправностей и профилактическое обслуживание.",
-    },
-  ];
-  return (
-    <div>
-      <Header />
-      <Features products={products} />
-      <Hero />
-      
-      <Questions />
-      <Pricing works={works} />
-      <Footer />
-    </div>
-  );
-}
-// const App = () => {
-//   const data = [
-//     {
-//       id: 1,
-//       name: "C++ Kids Eco",
-//       location: "Profsoyuz",
-//       qual: "0/7",
-//       studenta: 4,
-//       studentb: 10,
-//       status: false,
-//       week: "Pn,Vt,Sr,Cht,Pt,Sub",
-//     },
-//     {
-//       id: 2,
-//       name: "Pyton-Kids February",
-//       location: "Profsoyuz",
-//       qual: "0/7",
-//       studenta: 8,
-//       studentb: 10,
-//       status: false,
-//       week: "Pn,Vt,Sr,Cht,Pt,Sub",
-//     },
-//     {
-//       id: 3,
-//       name: "Html/Css February",
-//       studenta: 9,
-//       studentb: 12,
-//       status: false,
-//       location: "Sozidaniya",
-//       qual: "0/7",
-//       week: "Pn,Vt,Sr,Cht,Pt,Sub",
-//     },
-//   ];
-// return (
-// <div>
-//   {data.map((el, i) => {
-//     return (
-//       <Card
-//         key={i}
-//         name={el.name}
-//         studentb={el.studentb}
-//         studenta={el.studenta}
-//         location={el.location}
-//         qual={el.qual}
-//         week={el.week}
-//         status={el.status}
-//       />
-//     );
-//   })}
-// </div>
+      name: "Garet Bale",
+      job: "Teacher",
+      status: true,
+    }
+  ]);
 
-// );
-// };
+  const addUser = (event) => {
+    event.preventDefault();
+    let obj = {
+      id: Date.now(),
+      name: event.target["name"].value,
+      job: event.target["job"].value,
+      status: event.target["status"].value == "true",
+    };
+    setData([...data, obj]);
+    event.target.reset();
+  };
+
+  const delet = (id) => {
+    setData(data.filter((el) => el.id !== id));
+  };
+  const cheked = (id) => {
+    setData(
+      data.map((el) => (el.id === id ? { ...el, status: !el.status } : el)),
+    );
+  };
+
+  const filterData = data.filter((el) =>
+    el.name.toLowerCase().includes(srch.toUpperCase()),
+  );
+
+  return (
+    <>
+      <form onSubmit={addUser} className="w-[60%] m-auto mt-[20px]" action="">
+        <div className="flex gap-[30px]">
+          <input
+            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
+            type="text"
+            placeholder="Search by name..."
+            value={srch}
+            onChange={(el) => setsrch(el.target.value)}
+            name=""
+          />
+          <input
+            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
+            name="name"
+            type="text"
+            placeholder="Enter your name..."
+            requiredC
+          />
+          <input
+            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
+            name="job"
+            type="text"
+            placeholder="Enter your job..."
+            required
+          />
+          <select
+            className="border border-gray-400 w-[120px] rounded-[6px] pl-[20px] outline-none"
+            name="status"
+            id=""
+          >
+            <option className="" value="true">
+              Active
+            </option>
+            <option value="false">Inactive</option>
+          </select>
+          <button
+            className="border  border-gray-400 w-[120px] rounded-[6px] pl-[20px] bg-indigo-800 text-white hover:bg-indigo-300 hover:text-black"
+            type="submit"
+          >
+            +Add
+          </button>
+        </div>
+      </form>
+      <table className="text-center  w-[80%] m-auto rounded-[40px] mt-[20px]">
+        <thead>
+          <tr className="border bg-black text-white h-[40px] rounded-[30px]">
+            <th>Name</th>
+            <th>job</th>
+            <th>status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data
+            .filter((el) => el.name.toLowerCase().includes(srch.toLowerCase()))
+            .map((el, i) => {
+              return (
+                <tr key={el.id}>
+                  <td className="bg-blue-300 text-black hover:bg-blue-500">
+                    {el.name}
+                  </td>
+                  <td className="bg-blue-300 text-black hover:bg-blue-500">
+                    {el.job}
+                  </td>
+                  <td className="bg-blue-300 tblack hover:bg-blue-500">
+                    {el.status ? "Active" : "Inactive"}
+                  </td>
+                  <td className="border bg-blue-300 text-white">
+                    <button
+                      className="border w-[46%] hover:bg-gray-800 hover:text-white active:bg-red-500 active: text-black"
+                      onClick={() => delet(el.id)}
+                    >
+                      🗑️
+                    </button>
+                    <button className="border w-[46%] hover:bg-gray-800 hover:text-white active:bg-red-500 active: text-black">
+                      ✏️
+                    </button>
+                    <input
+                      checked={el.status}
+                      onChange={() => cheked(el.id)}
+                      type="checkbox"
+                      className="w-[30px] h-[100%] m-4"
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+        </tbody>
+      </table>
+    </>
+  );
+} 
 
 export default App;
