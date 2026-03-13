@@ -1,157 +1,143 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-function App() {
-  let [srch, setsrch] = useState("");
+const App = () => {
+  const [status, setStatus] = useState(false);
+  const [idx, setIdx] = useState(null);
+  const [name, setName] = useState("");
+  const [age, setAge] = useState("");
+  const [search, setSearch] = useState(""); // Состояние для поиска
+
   const [data, setData] = useState([
-    {
-      id: 1,
-      name: "CR7",
-      job: "Senior",
-      status: true,
-    },
-    {
-      id: 2,
-      name: "Karim Benzama",
-      job: "Junior",
-      status: false,
-    },
-    {
-      id: 3,
-      name: "Bonuchi",
-      job: "middle",
-      status: true,
-    },
-    {
-      id: 4,
-      name: "Maykl Jordan",
-      job: "Biginer",
-      status: false,
-    },
-    {
-      id: 5,
-      name: "Garet Bale",
-      job: "Teacher",
-      status: true,
-    }
+    { status: false, name: "Anita Beahan", age: 94, id: 1 },
+    { status: true, name: "Francis Mante", age: 7, id: 2 },
+    { status: false, name: "June Oberbrunner", age: 64, id: 3 },
+    { status: true, name: "Teri Stokes", age: 6, id: 4 },
+    { status: false, name: "Gordon Macejkovic", age: 98, id: 5 },
+    { status: true, name: "Evan Hilll", age: 97, id: 6 },
+    { status: false, name: "Gretchen Rice V", age: 48, id: 7 },
   ]);
 
-  const addUser = (event) => {
-    event.preventDefault();
-    let obj = {
-      id: Date.now(),
-      name: event.target["name"].value,
-      job: event.target["job"].value,
-      status: event.target["status"].value == "true",
-    };
-    setData([...data, obj]);
-    event.target.reset();
-  };
-
-  const delet = (id) => {
-    setData(data.filter((el) => el.id !== id));
-  };
-  const cheked = (id) => {
-    setData(
-      data.map((el) => (el.id === id ? { ...el, status: !el.status } : el)),
-    );
-  };
-
-  const filterData = data.filter((el) =>
-    el.name.toLowerCase().includes(srch.toUpperCase()),
+  // Фильтрация данных для поиска
+  const filteredData = data.filter((el) =>
+    el.name.toLowerCase().includes(search.toLowerCase()),
   );
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (idx === null) return; // Если ничего не редактируем, выходим
+
+    const updatedData = data.map((el) =>
+      el.id === idx ? { ...el, name, age: Number(age), status } : el,
+    );
+
+    setData(updatedData);
+
+    // Очистка полей
+    setName("");
+    setAge("");
+    setIdx(null);
+  };
+
+  const deleteUser = (id) => {
+    setData(data.filter((el) => el.id !== id));
+  };
+
+  const showEdit = (el) => {
+    setName(el.name);
+    setAge(el.age);
+    setIdx(el.id);
+    setStatus(el.status);
+  };
+
   return (
-    <>
-      <form onSubmit={addUser} className="w-[60%] m-auto mt-[20px]" action="">
-        <div className="flex gap-[30px]">
+    <div className="p-8 bg-gray-50 min-h-screen font-sans">
+      <div className="max-w-4xl mx-auto space-y-6">
+        {/* Поиск */}
+        <input
+          type="search"
+          placeholder="Search by name..."
+          className="w-full p-2 border rounded-lg shadow-sm outline-none focus:ring-2 focus:ring-blue-400"
+          onChange={(e) => setSearch(e.target.value)}
+        />
+
+        {/* Форма редактирования */}
+        <form
+          onSubmit={handleSubmit}
+          className="flex gap-4 bg-white p-4 rounded-xl shadow-md"
+        >
           <input
-            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
+            onChange={(e) => setName(e.target.value)}
             type="text"
-            placeholder="Search by name..."
-            value={srch}
-            onChange={(el) => setsrch(el.target.value)}
-            name=""
+            placeholder="Name"
+            value={name}
+            className="border p-2 rounded-lg flex-1"
           />
           <input
-            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
-            name="name"
-            type="text"
-            placeholder="Enter your name..."
-            requiredC
+            onChange={(e) => setAge(e.target.value)}
+            type="number"
+            placeholder="Age"
+            value={age}
+            className="border p-2 rounded-lg w-24"
           />
-          <input
-            className="border border-gray-400 w-[220px] rounded-[6px] pl-[20px] outline-none"
-            name="job"
-            type="text"
-            placeholder="Enter your job..."
-            required
-          />
-          <select
-            className="border border-gray-400 w-[120px] rounded-[6px] pl-[20px] outline-none"
-            name="status"
-            id=""
-          >
-            <option className="" value="true">
-              Active
-            </option>
-            <option value="false">Inactive</option>
-          </select>
           <button
-            className="border  border-gray-400 w-[120px] rounded-[6px] pl-[20px] bg-indigo-800 text-white hover:bg-indigo-300 hover:text-black"
             type="submit"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
           >
-            +Add
+            Save
           </button>
-        </div>
-      </form>
-      <table className="text-center  w-[80%] m-auto rounded-[40px] mt-[20px]">
-        <thead>
-          <tr className="border bg-black text-white h-[40px] rounded-[30px]">
-            <th>Name</th>
-            <th>job</th>
-            <th>status</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          {data
-            .filter((el) => el.name.toLowerCase().includes(srch.toLowerCase()))
-            .map((el, i) => {
-              return (
-                <tr key={el.id}>
-                  <td className="bg-blue-300 text-black hover:bg-blue-500">
-                    {el.name}
+        </form>
+
+        {/* Таблица */}
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+          <table className="w-full text-left border-collapse">
+            <thead className="bg-gray-100">
+              <tr>
+                <th className="p-4 border-b">#</th>
+                <th className="p-4 border-b">Name</th>
+                <th className="p-4 border-b">Age</th>
+                <th className="p-4 border-b">Status</th>
+                <th className="p-4 border-b text-center">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredData.map((el, i) => (
+                <tr
+                  key={el.id}
+                  className="hover:bg-gray-50 border-b last:border-0"
+                >
+                  <td className="p-4 text-gray-500">{i + 1}</td>
+                  <td className="p-4 font-medium">{el.name}</td>
+                  <td className="p-4 text-gray-600">{el.age}</td>
+                  <td className="p-4">
+                    <span
+                      className={`px-2 py-1 rounded-full text-xs ${el.status ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}
+                    >
+                      {el.status ? "Active" : "Inactive"}
+                    </span>
                   </td>
-                  <td className="bg-blue-300 text-black hover:bg-blue-500">
-                    {el.job}
-                  </td>
-                  <td className="bg-blue-300 tblack hover:bg-blue-500">
-                    {el.status ? "Active" : "Inactive"}
-                  </td>
-                  <td className="border bg-blue-300 text-white">
+                  <td className="p-4 flex justify-center gap-2">
                     <button
-                      className="border w-[46%] hover:bg-gray-800 hover:text-white active:bg-red-500 active: text-black"
-                      onClick={() => delet(el.id)}
+                      onClick={() => deleteUser(el.id)}
+                      className="p-2 hover:bg-red-50 rounded-full text-red-500"
                     >
                       🗑️
                     </button>
-                    <button className="border w-[46%] hover:bg-gray-800 hover:text-white active:bg-red-500 active: text-black">
-                      ✏️
+                    <button
+                      onClick={() => showEdit(el)}
+                      className="p-2 hover:bg-blue-50 rounded-full text-blue-500"
+                    >
+                      ✒️
                     </button>
-                    <input
-                      checked={el.status}
-                      onChange={() => cheked(el.id)}
-                      type="checkbox"
-                      className="w-[30px] h-[100%] m-4"
-                    />
                   </td>
                 </tr>
-              );
-            })}
-        </tbody>
-      </table>
-    </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
   );
 } 
 
 export default App;
+    
