@@ -375,6 +375,7 @@ const App = () => {
       </Dialog>
     </Box>
   );
-};
+} 
 
 export default App;
+    
