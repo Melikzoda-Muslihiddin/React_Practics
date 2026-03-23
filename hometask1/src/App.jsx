@@ -28,6 +28,28 @@ import {
 
 const API = "http://localhost:3001/users";
 
+import TextField from "@mui/material/TextField";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
+import Checkbox from "@mui/material/Checkbox";
+import Select from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import FormControl from "@mui/material/FormControl";
+import InputLabel from "@mui/material/InputLabel";
+import Chip from "@mui/material/Chip";
+import Dialog from "@mui/material/Dialog";
+import DialogTitle from "@mui/material/DialogTitle";
+import DialogContent from "@mui/material/DialogContent";
+import DialogActions from "@mui/material/DialogActions";
+import Typography from "@mui/material/Typography";
+const API = "http://localhost:3001/users";
+const startForm = {
+  name: "",
+  age: "",
+  job: "",
+  status: true,
+};
 const App = () => {
   const [users, setUsers] = useState([]);
 
@@ -482,6 +504,7 @@ const App = () => {
       </Dialog>
     </Box>
   );
-};
+} 
 
 export default App;
+    
