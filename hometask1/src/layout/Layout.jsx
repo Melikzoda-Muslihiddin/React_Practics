@@ -1,18 +1,17 @@
-import React from 'react'
-import {Link,Outlet} from "react-router"
+import { Outlet } from "react-router-dom";
+import Headerses from "../components/Headerses";
+import Footerses from "../components/Footerses";
+import TopBanner from "../components/TopBanner";
 
 const Layout = () => {
   return (
-    <div>
-      <nav>
-        <Link to={"/about"}>About</Link>
-        <Link to={"/"}>Home</Link>
-      </nav>
-      <div>
-        <Outlet/>
-      </div>
-    </div>
-  )
-}
+    <>
+    <TopBanner />
+      <Headerses />
+      <Outlet />
+      <Footerses />
+    </>
+  );
+};
 
-export default Layout
+export default Layout;

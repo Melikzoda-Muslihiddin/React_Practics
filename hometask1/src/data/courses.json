@@ -1,0 +1,170 @@
+[
+  {
+    "id": 1,
+    "slug": "html-css",
+    "title": "HTML & CSS",
+    "category": "Frontend",
+    "duration": "1 month",
+    "description": "Learn the building blocks of the web",
+    "image": "https://www.softclub.tj/html.png",
+
+    "heroDescription": "Learn HTML5 and CSS3 step by step — from basic tags to responsive layouts. Build real websites and master modern CSS.",
+
+    "startDate": "5 April",
+    "classesPerWeek": "6 classes per week",
+    "portfolioProjects": "3 portfolio projects",
+    "groupSize": "Group of 10–12 people",
+    "seatsLeft": "8 seats left",
+    "certificateText": "Certificate upon completion",
+
+    "whyTitle": "Why HTML & CSS?",
+    "whyDescription": "This course provides a solid foundation in HTML and CSS. You will learn structure, styling, Flexbox, Grid, and responsive design.",
+
+    "salaryJunior": "250$",
+    "salaryMiddle": "600$",
+    "salarySenior": "1500$",
+
+    "program": [
+      {
+        "id": 1,
+        "title": "HTML Basics",
+        "topics": [
+          "What is HTML? Document structure",
+          "Headings, paragraphs, links, images",
+          "Lists: ordered, unordered, description",
+          "Forms and input types",
+          "Attributes: id, class, title, alt",
+          "Semantic tags: header, nav, main, footer"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "CSS Basics",
+        "topics": [
+          "What is CSS and how to connect it",
+          "Selectors, colors, units",
+          "Fonts and text styles",
+          "Box model",
+          "Borders, margin, padding"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Layouts & Positioning",
+        "topics": [
+          "Display block and inline",
+          "Position static, relative, absolute",
+          "Z-index basics",
+          "Width, height, overflow"
+        ]
+      }
+    ],
+    "laptopRequirements": [
+      {
+        "title": "Intel Core i5 (10th generation)",
+        "subtitle": "Processor",
+        "icon": "https://cdn-icons-png.flaticon.com/512/424/424048.png"
+      },
+      {
+        "title": "Windows 10, 64-bit",
+        "subtitle": "Operating System",
+        "icon": "https://cdn-icons-png.flaticon.com/512/888/888879.png"
+      },
+      {
+        "title": "8GB",
+        "subtitle": "RAM",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1041/1041916.png"
+      },
+      {
+        "title": "SSD 256 GB",
+        "subtitle": "Storage",
+        "icon": "https://cdn-icons-png.flaticon.com/512/1041/1041922.png"
+      }
+    ],
+
+    "certificateTitle": "Softclub Certificate",
+    "certificateDescription": "Will confirm that you have completed the course and help you find a job",
+    "certificateImage": "https://your-certificate-image-link.png"
+  },
+  {
+    "id": 2,
+    "slug": "javascript",
+    "title": "JavaScript",
+    "category": "Frontend",
+    "duration": "2 months",
+    "description": "Master programming fundamentals with JavaScript",
+    "image": "https://www.softclub.tj/js.png"
+  },
+  {
+    "id": 3,
+    "slug": "react",
+    "title": "React",
+    "category": "Frontend",
+    "duration": "3 months",
+    "description": "Build interactive UIs with the popular JavaScript library",
+    "image": "https://www.softclub.tj/react.png"
+  },
+  {
+    "id": 4,
+    "slug": "design",
+    "title": "Design",
+    "category": "Design",
+    "duration": "4 months",
+    "description": "Create beautiful, functional digital experiences",
+    "image": "https://www.softclub.tj/figma.png"
+  },
+  {
+    "id": 5,
+    "slug": "cpp",
+    "title": "Basics of C++",
+    "category": "Backend",
+    "duration": "1 month",
+    "description": "Start your programming journey with C++",
+    "image": "https://www.softclub.tj/cpp.png"
+  },
+  {
+    "id": 6,
+    "slug": "python",
+    "title": "Python",
+    "category": "Backend",
+    "duration": "4 months",
+    "description": "Learn one of the most versatile programming languages",
+    "image": "https://www.softclub.tj/python.png"
+  },
+  {
+    "id": 7,
+    "slug": "csharp",
+    "title": "C#",
+    "category": "Backend",
+    "duration": "3 months",
+    "description": "Build versatile applications with this powerful language",
+    "image": "https://www.softclub.tj/c.png"
+  },
+  {
+    "id": 8,
+    "slug": "git",
+    "title": "Git",
+    "category": "Frontend",
+    "duration": "1 month",
+    "description": "Master version control to collaborate on coding projects",
+    "image": "https://www.softclub.tj/git.png"
+  },
+  {
+    "id": 9,
+    "slug": "flutter",
+    "title": "Flutter",
+    "category": "Mobile",
+    "duration": "4 months",
+    "description": "Build cross-platform mobile apps with a single codebase",
+    "image": "https://www.softclub.tj/mobile.png"
+  },
+  {
+    "id": 10,
+    "slug": "kids-programming",
+    "title": "Programming for teenagers",
+    "category": "Kids",
+    "duration": "10 months",
+    "description": "Programming fundamentals for young learners",
+    "image": "https://www.softclub.tj/kids.png"
+  }
+]
