@@ -1,12 +1,7 @@
-import React from 'react'
+
 
 const Login = () => {
-  
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div className="mx-auto max-w-280 px-6 py-20">Login page</div>;
+};
 
-export default Login
+export default Login;
