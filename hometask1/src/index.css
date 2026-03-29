@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+.info-swiper,
+.info-swiper .swiper,
+.info-swiper .swiper-wrapper,
+.info-swiper .swiper-slide {
+  width: 100%;
+  max-width: 100%;
+}
+
+.info-swiper .swiper-slide {
+  overflow: hidden;
+}
+
+.info-swiper .swiper-button-prev,
+.info-swiper .swiper-button-next {
+  color: #ff3b3f;
+}
+
+.info-swiper .swiper-pagination-bullet-active {
+  background: #ff3b3f;
+}
+.home-cases-swiper .swiper-button-prev,
+.home-cases-swiper .swiper-button-next {
+  color: #ff3b3f;
+}
+
+.home-cases-swiper .swiper-pagination-bullet-active {
+  background: #ff3b3f;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+.partners-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.home-cases-swiper .swiper-button-prev,
+.home-cases-swiper .swiper-button-next,
+.info-swiper .swiper-button-prev,
+.info-swiper .swiper-button-next {
+  color: #ff3b3f;
+}
+
+.home-cases-swiper .swiper-pagination-bullet-active,
+.info-swiper .swiper-pagination-bullet-active {
+  background: #ff3b3f;
+}
+.cases-cards-swiper {
+  width: 100%;
+  max-width: 430px;
+  overflow: visible !important;
+}
+
+.cases-cards-swiper .swiper {
+  overflow: visible !important;
+}
+
+.cases-cards-swiper .swiper-slide {
+  border-radius: 26px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cases-cards-swiper .swiper-slide-shadow {
+  display: none !important;
+}
