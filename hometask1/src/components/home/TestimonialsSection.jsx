@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
     <section className="bg-[#f3f3f3] py-20 md:py-24">
       <div className="mx-auto max-w-350 px-6">
         <div className="grid gap-10 xl:grid-cols-[0.95fr_1.05fr] xl:items-start">
-          {/* LEFT */}
+          
           <div>
             <h2 className="mb-10 text-5xl font-black uppercase leading-[1.02] text-[#1f1f21] md:text-6xl xl:text-7xl">
               Testimonials

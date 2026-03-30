@@ -1,0 +1,9 @@
+{
+  "welcome": "Welcome",
+  "todo": {
+    "title": "Todo List",
+    "add": "Add Task",
+    "delete": "Delete",
+    "edit": "Edit"
+  }
+}

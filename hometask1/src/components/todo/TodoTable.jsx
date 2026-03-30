@@ -5,7 +5,7 @@ import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-
+import { useTranslation } from "react-i18next";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -16,6 +16,7 @@ import TodoStatusChip from "./TodoStatusChip";
 import { getImageUrl } from "../../utils/getImageUrl";  
 
 const TodoTable = ({ rows, onInfo, onEdit, onDelete, onCompleted }) => {
+  const { t } = useTranslation();
   return (
     <TableContainer
       component={Paper}
@@ -27,11 +28,11 @@ const TodoTable = ({ rows, onInfo, onEdit, onDelete, onCompleted }) => {
       <Table>
         <TableHead>
           <TableRow>
-            <TableCell>Preview</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Description</TableCell>
-            <TableCell>Status</TableCell>
-            <TableCell align="center">Actions</TableCell>
+            <TableCell>{t("Preview")}</TableCell>
+            <TableCell>{t("Name")}</TableCell>
+            <TableCell>{t("Description")}</TableCell>
+            <TableCell>{t("Status")}</TableCell>
+            <TableCell align="center">{t("Actions")}</TableCell>
           </TableRow>
         </TableHead>
 

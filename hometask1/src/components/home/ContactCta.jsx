@@ -4,7 +4,7 @@ const ContactCta = ({ contactRef }) => {
       <div className="mx-auto max-w-350 px-6">
         <div className="rounded-xl bg-[#1f1f21] px-10 py-12 text-white shadow-[0_12px_35px_rgba(0,0,0,0.14)] md:px-12 md:py-14 xl:px-14">
           <div className="grid gap-10 xl:grid-cols-[0.85fr_1.15fr] xl:items-start">
-            {/* LEFT */}
+            
             <div>
               <h2 className="text-5xl font-black uppercase leading-[1.02] md:text-6xl xl:text-7xl">
                 Subscribe
@@ -17,7 +17,7 @@ const ContactCta = ({ contactRef }) => {
               </p>
             </div>
 
-            {/* RIGHT */}
+
             <div className="xl:pt-2">
               <div className="space-y-7 text-[18px] leading-8 text-white/95">
                 <p>

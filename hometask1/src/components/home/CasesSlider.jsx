@@ -71,7 +71,7 @@ const CasesSlider = () => {
         </div>
 
         <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          {/* LEFT: CARDS SWIPER */}
+
           <div className="relative mx-auto flex w-full max-w-115 items-center justify-center">
             <Swiper
               effect="cards"
@@ -104,7 +104,7 @@ const CasesSlider = () => {
             </Swiper>
           </div>
 
-          {/* RIGHT: INFO */}
+
           <div className="relative">
             <div className="absolute right-0 top-0 hidden h-65 w-65 rounded-full bg-[radial-gradient(circle,rgba(0,0,0,0.06)_1.4px,transparent_1.4px)] bg-size-[16px_16px] lg:block" />
 

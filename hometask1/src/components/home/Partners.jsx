@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 
 import "swiper/css";
+import { t } from "i18next";
 
 const logos = [
   "/images/logo1.svg",
@@ -20,7 +21,7 @@ const Partners = () => {
       <div className="mx-auto max-w-350 px-6">
         <div className="mb-6 text-center">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ff3b3f]">
-            Trusted partners
+            {t("Trusted partners")}
           </p>
         </div>
 
@@ -30,7 +31,7 @@ const Partners = () => {
           spaceBetween={50}
           loop={true}
           allowTouchMove={false}
-          speed={5000}
+          speed={6000}
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
